@@ -103,7 +103,7 @@ def fig3():
     pred = np.array([21.19, 45.85, 65.63, 78.80, 86.37, 90.86, 93.82, 95.82, 97.15, 98.36])
     obs = np.array([22.70, 45.73, 64.10, 77.32, 84.81, 90.40, 93.42, 96.22, 97.39, 99.17])
 
-    fig, (axa, axb) = plt.subplots(1, 2, figsize=(W2, 2.9))
+    fig, (axa, axb) = plt.subplots(1, 2, figsize=(W2, 2.9), constrained_layout=True)
 
     # (a) decile: predicted vs observed acceptance
     axa.plot(dec, obs, marker="o", color=COL, label="Observed acceptance")
@@ -170,7 +170,7 @@ def fig4():
 #         C_aggregation_error.csv, C_error_by_reliability_decile.csv)
 # =============================================================================
 def fig5():
-    fig, (axa, axb) = plt.subplots(1, 2, figsize=(W2, 2.9))
+    fig, (axa, axb) = plt.subplots(2, 1, figsize=(W1, 5.2), constrained_layout=True)
 
     # (a) method comparison
     methods = ["Naive\n(nominal)", "Behavior\n(accept-\nonly)", "Behavior\n(full)", "Observed\n(truth)"]
